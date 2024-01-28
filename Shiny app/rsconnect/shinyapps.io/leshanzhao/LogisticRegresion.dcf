@@ -1,0 +1,12 @@
+name: LogisticRegresion
+title: LogisticRegresion
+username: leshanzhao
+account: leshanzhao
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 11054986
+bundleId:
+url: https://leshanzhao.shinyapps.io/LogisticRegresion/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE

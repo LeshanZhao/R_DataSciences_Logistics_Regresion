@@ -1,0 +1,19 @@
+Package: Final.Project.10
+Type: Package
+Title: Logistic Regression Package
+Version: 0.1.0
+Author: @Fangjian Yang
+        @Leshan Zhao
+Maintainer: Fangjian Yang <fzy0022@auburn.edu>;Leshan Zhao <lzz0064@auburn.edu>
+Description:  This is an R package that uses numerical optimization to implement logistic regression. This package includes the following outputs:
+    1. The estimated coefficient vector(including the intercept);
+    2. Initial coefficient vector; and
+    3. Bootstrap Confidence intervals; and
+    4. The fitted logistic curve; and
+    5. Confusion Matrix; and
+    6. Six metrics(Prevalence, Accuracy, Sensitivity, Specificity, False Discovery Rate,Diagnostic Odds Ratio); and
+    7. The evaluation chart of the metrics with different cut-off values.
+License: GPL
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.1
