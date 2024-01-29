@@ -13,7 +13,10 @@ library(datasets)
 #install.packages("plotly")
 library(plotly)
 
-if (!require(rsconnect)) install.packages("E:/CS/R/STAT6210/FinalProject/Logistic.Regression_0.1.1.tar.gz",
+setwd("E:/CS/R/STAT6210/FinalProject/R_DataSciences_Logistics_Regresion")
+
+
+if (!require(Logistic.Regression)) install.packages("E:/CS/R/STAT6210/FinalProject/Logistic.Regression_0.1.1.tar.gz",
                                           repos = NULL, type = "source")
 library(Logistic.Regression)
 
@@ -23,7 +26,6 @@ library(rsconnect)
 rsconnect::setAccountInfo(name='leshanzhao', token='BBAEE0CC92FD2C6C5AC0D51BFA61F740', secret='2T8+uoUKKHzmh73qzsxS6FuSuYDuL3joSfpph7A8')
 
 
-setwd("E:/CS/R/STAT6210/FinalProject/R_DataSciences_Logistics_Regresion")
 
 
 

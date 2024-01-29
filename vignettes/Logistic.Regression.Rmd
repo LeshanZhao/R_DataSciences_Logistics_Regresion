@@ -1,17 +1,17 @@
 ---
-title: "`Final.Project.10`  Vignette"
+title: "`Logistic.Regression`  Vignette"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Final.Project.10}
+  %\VignetteIndexEntry{Logistic.Regression}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
 
-Source: <https://github.com/AU-R-Data-Science/Final.Project.10>
+Source: https://github.com/LeshanZhao/R_DataSciences_Logistics_Regresion>
 
-GitHub repository: `Final.Project.10`
+GitHub repository: `Logistic.Regression`
 
-Package: `Final.Project.10`
+Package: `Logistic.Regression`
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
@@ -24,22 +24,22 @@ knitr::opts_chunk$set(
 
 ```{r prepare, include=FALSE}
 library(devtools)
-install_github("https://github.com/AU-R-Data-Science/Final.Project.10")
+install_github("https://github.com/LeshanZhao/R_DataSciences_Logistics_Regresion")
 ```
 
 ## Introduction
 
-The `Final.Project.10` package in based on the final project assignment of STAT-6210. This document explains and gives examples of how to use the package functions for all the desired outputs using Weekly and mtcars dataset.
+The `Logistic.Regression` package in based on the final project assignment of STAT-6210. This document explains and gives examples of how to use the package functions for all the desired outputs using Weekly and mtcars dataset.
 
-And the develop **shiny app** stored in <https://github.com/AU-R-Data-Science/Final.Project.10/tree/main/Shiny%20app>, please check it separately.
+And the developed **shiny app** stored in <https://github.com/LeshanZhao/R_DataSciences_Logistics_Regresion/tree/main/Shiny%20app>, please check it separately.
 
 ```{r setup}
-library(Final.Project.10)
+library(Logistic.Regression)
 ```
 
 The available functions allow the user to input data sets to fit a logistic regression. The output includes: 1. estimated logistic regression model parameters; 2. initial values of the parameters; 3. confidence intervals for each parameter; 4. fitted logistic regression curves; 5. confusion matrix; 6. six metrics based on default cut-off values (Prevalence, Accuracy, Sensitivity, Specificity, False Discovery Rate and Diagnostic Odds Ratio) and 7. metrics with different cut-off values.
 
-This document shows the usage and output of the functions in `Final.Project.10`, using the `Weekly` dataset from the `ISLR` package and the `mtcars` dataset as examples. The `Weekly` dataset described the weekly percentage returns for the S&P 500 stock index between 1990 and 2010. And the `mtcars` was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973--74 models).
+This document shows the usage and output of the functions in `Logistic.Regression`, using the `Weekly` dataset from the `ISLR` package and the `mtcars` dataset as examples. The `Weekly` dataset described the weekly percentage returns for the S&P 500 stock index between 1990 and 2010. And the `mtcars` was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973--74 models).
 
 ## Data Pre-Processing
 
