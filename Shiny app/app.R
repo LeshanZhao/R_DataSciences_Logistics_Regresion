@@ -13,11 +13,11 @@ library(datasets)
 #install.packages("plotly")
 library(plotly)
 
-setwd("E:/CS/R/STAT6210/FinalProject/R_DataSciences_Logistics_Regresion")
+# setwd("E:/CS/R/STAT6210/FinalProject/R_DataSciences_Logistics_Regresion")
 
+if (!require(devtools)) install.packages("devtools")
 
-if (!require(Logistic.Regression)) install.packages("E:/CS/R/STAT6210/FinalProject/Logistic.Regression_0.1.1.tar.gz",
-                                          repos = NULL, type = "source")
+if (!require(Logistic.Regression)) devtools::install_github("https://github.com/LeshanZhao/R_DataSciences_Logistics_Regresion")
 library(Logistic.Regression)
 
 
@@ -28,16 +28,11 @@ rsconnect::setAccountInfo(name='leshanzhao', token='BBAEE0CC92FD2C6C5AC0D51BFA61
 
 
 
-
-
-
-
-
 # Define UI for application that draws a histogram
 ui <- fluidPage(
 
   # Application title
-  titlePanel("Metrics with different cut-off values"),
+  titlePanel("Metrics for Logistic Regression with different cut-off values"),
 
   # Sidebar with a slider input for number of bins
   sidebarLayout(
@@ -45,7 +40,7 @@ ui <- fluidPage(
       sliderInput("step", "Step Length:",
                   min = 0.01,
                   max = 0.1,
-                  value = 0.1,),
+                  value = 0.02,),
       sliderInput("cutoff", "Current Cut-off value:",
                   min = 0.2,
                   max = 0.8,
@@ -62,7 +57,7 @@ ui <- fluidPage(
                            "Specificity" = "Specificity",
                            "False Discovery Rate" = "False.Discovery.Rate",
                            "Diagnostic Odds Ratio" = "Diagnostic.Odds.Ratio"),
-                         selected="Prevalence"),
+                         selected=c("Specificity","Sensitivity")),
       checkboxGroupInput("Predictor", "Predictor to fit:",
                          c("Lag1" = "Lag1",
                            "Lag2" = "Lag2",
@@ -78,12 +73,13 @@ ui <- fluidPage(
 
     # Show a plot of the generated distribution
     mainPanel(
-      p("Note: This dataset contains a large amount of data, adjusting the number of bootstraps and predictor will cause a logistic regression to be re-fitted to the dataset, this may take a long time, please be patient."),
+      p("(Please kindly be noted that: Adjusting the number of bootstraps and predictor will ask the logistic regression model to be re-fitted to the dataset, which may take a long time.)"),
       tabsetPanel(
         tabPanel("Metrics list", tableOutput("Metrics.list")),
         tabPanel("Metrics Plot", plotOutput("plot")),
         tabPanel("Confusion Matrix", tableOutput("Confusion.Matrix"), tableOutput("Current.Metrics")),
-        tabPanel("Logistic Regression model",tableOutput("Beta"),textOutput("Note"))
+        tabPanel("Logistic Regression model",tableOutput("Beta"),textOutput("Note")),
+        selected = "Metrics Plot"
       )
     )
   )
@@ -106,7 +102,7 @@ Metrics.plot <- function(predictor,metrics,step.1) {
   row <- nrow(table.2)
   colnames(table.2) <- c("Cut-off value",metrics)
 
-  image <- data.frame("cutoff"=NA,"value"=NA)[-1,]
+  image <- data.frame("cut-off value"=NA,"metric value"=NA)[-1,]
   if(ncol(table.2)>=2){
     for(i in 2:(n+1)){
       temp <- table.2[,c(1,i)]

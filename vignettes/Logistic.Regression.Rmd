@@ -7,7 +7,7 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-Source: https://github.com/LeshanZhao/R_DataSciences_Logistics_Regresion>
+<Source: https://github.com/LeshanZhao/R_DataSciences_Logistics_Regresion>
 
 GitHub repository: `Logistic.Regression`
 
@@ -24,7 +24,8 @@ knitr::opts_chunk$set(
 
 ```{r prepare, include=FALSE}
 library(devtools)
-install_github("https://github.com/LeshanZhao/R_DataSciences_Logistics_Regresion")
+if (!require(Logistic.Regression)) devtools::install_github("https://github.com/LeshanZhao/R_DataSciences_Logistics_Regresion")
+
 ```
 
 ## Introduction

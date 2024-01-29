@@ -1,0 +1,12 @@
+name: LogisticRegression-Demo
+title: LogisticRegression-Demo
+username: leshanzhao
+account: leshanzhao
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 11056011
+bundleId: 8194569
+url: https://leshanzhao.shinyapps.io/LogisticRegression-Demo/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE

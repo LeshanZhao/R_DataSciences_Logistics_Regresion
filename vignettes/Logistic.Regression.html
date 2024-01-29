@@ -12,7 +12,7 @@
 
 
 
-<title>Final.Project.10 Vignette</title>
+<title>Logistic.Regression Vignette</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -337,22 +337,23 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 
 
-<h1 class="title toc-ignore"><code>Final.Project.10</code> Vignette</h1>
+<h1 class="title toc-ignore"><code>Logistic.Regression</code>
+Vignette</h1>
 
 
 
-<p>Source: <a href="https://github.com/AU-R-Data-Science/Final.Project.10" class="uri">https://github.com/AU-R-Data-Science/Final.Project.10</a></p>
-<p>GitHub repository: <code>Final.Project.10</code></p>
-<p>Package: <code>Final.Project.10</code></p>
+<p>&lt;Source: <a href="https://github.com/LeshanZhao/R_DataSciences_Logistics_Regresion" class="uri">https://github.com/LeshanZhao/R_DataSciences_Logistics_Regresion</a>&gt;</p>
+<p>GitHub repository: <code>Logistic.Regression</code></p>
+<p>Package: <code>Logistic.Regression</code></p>
 <div id="introduction" class="section level2">
 <h2>Introduction</h2>
-<p>The <code>Final.Project.10</code> package in based on the final
+<p>The <code>Logistic.Regression</code> package in based on the final
 project assignment of STAT-6210. This document explains and gives
 examples of how to use the package functions for all the desired outputs
 using Weekly and mtcars dataset.</p>
-<p>And the develop <strong>shiny app</strong> stored in <a href="https://github.com/AU-R-Data-Science/Final.Project.10/tree/main/Shiny%20app" class="uri">https://github.com/AU-R-Data-Science/Final.Project.10/tree/main/Shiny%20app</a>,
+<p>And the developed <strong>shiny app</strong> stored in <a href="https://github.com/LeshanZhao/R_DataSciences_Logistics_Regresion/tree/main/Shiny%20app" class="uri">https://github.com/LeshanZhao/R_DataSciences_Logistics_Regresion/tree/main/Shiny%20app</a>,
 please check it separately.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(Final.Project<span class="fl">.10</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(Logistic.Regression)</span></code></pre></div>
 <p>The available functions allow the user to input data sets to fit a
 logistic regression. The output includes: 1. estimated logistic
 regression model parameters; 2. initial values of the parameters; 3.
@@ -362,7 +363,7 @@ values (Prevalence, Accuracy, Sensitivity, Specificity, False Discovery
 Rate and Diagnostic Odds Ratio) and 7. metrics with different cut-off
 values.</p>
 <p>This document shows the usage and output of the functions in
-<code>Final.Project.10</code>, using the <code>Weekly</code> dataset
+<code>Logistic.Regression</code>, using the <code>Weekly</code> dataset
 from the <code>ISLR</code> package and the <code>mtcars</code> dataset
 as examples. The <code>Weekly</code> dataset described the weekly
 percentage returns for the S&amp;P 500 stock index between 1990 and
@@ -470,50 +471,50 @@ default will be <em>20</em>.</p>
 <td align="left">intercept</td>
 <td align="right">0.2668652</td>
 <td align="right">0.5659825</td>
-<td align="right">0.1472567</td>
-<td align="right">0.3759632</td>
+<td align="right">0.1714948</td>
+<td align="right">0.4294471</td>
 </tr>
 <tr class="even">
 <td align="left">Lag1</td>
 <td align="right">-0.0412693</td>
 <td align="right">-0.0100417</td>
-<td align="right">-0.0870134</td>
-<td align="right">-0.0135860</td>
+<td align="right">-0.0884745</td>
+<td align="right">-0.0095593</td>
 </tr>
 <tr class="odd">
 <td align="left">Lag2</td>
 <td align="right">0.0584429</td>
 <td align="right">0.0140856</td>
-<td align="right">0.0218817</td>
-<td align="right">0.0892827</td>
+<td align="right">0.0087291</td>
+<td align="right">0.0905507</td>
 </tr>
 <tr class="even">
 <td align="left">Lag3</td>
 <td align="right">-0.0160613</td>
 <td align="right">-0.0037521</td>
-<td align="right">-0.0667896</td>
-<td align="right">0.0397763</td>
+<td align="right">-0.0645067</td>
+<td align="right">0.0243235</td>
 </tr>
 <tr class="odd">
 <td align="left">Lag4</td>
 <td align="right">-0.0277905</td>
 <td align="right">-0.0066555</td>
-<td align="right">-0.0733562</td>
-<td align="right">-0.0011790</td>
+<td align="right">-0.0734192</td>
+<td align="right">-0.0032065</td>
 </tr>
 <tr class="even">
 <td align="left">Lag5</td>
 <td align="right">-0.0144721</td>
 <td align="right">-0.0034036</td>
-<td align="right">-0.0473900</td>
-<td align="right">0.0178172</td>
+<td align="right">-0.0584182</td>
+<td align="right">0.0219718</td>
 </tr>
 <tr class="odd">
 <td align="left">Volume</td>
 <td align="right">-0.0227415</td>
 <td align="right">-0.0057436</td>
-<td align="right">-0.0830814</td>
-<td align="right">0.0072614</td>
+<td align="right">-0.0708555</td>
+<td align="right">0.0170560</td>
 </tr>
 </tbody>
 </table>
@@ -559,23 +560,23 @@ be calculated by <code>boot.confi()</code>.</p>
 <tbody>
 <tr class="odd">
 <td align="left">2.5%</td>
-<td align="right">0.1168726</td>
-<td align="right">-0.0800333</td>
-<td align="right">0.0152617</td>
-<td align="right">-0.0736067</td>
-<td align="right">-0.0742428</td>
-<td align="right">-0.0711538</td>
-<td align="right">-0.0615067</td>
+<td align="right">0.1150987</td>
+<td align="right">-0.0891374</td>
+<td align="right">0.0112473</td>
+<td align="right">-0.0485043</td>
+<td align="right">-0.0825385</td>
+<td align="right">-0.0655754</td>
+<td align="right">-0.1151077</td>
 </tr>
 <tr class="even">
 <td align="left">97.5%</td>
-<td align="right">0.4069022</td>
-<td align="right">-0.0113304</td>
-<td align="right">0.0977206</td>
-<td align="right">0.0224374</td>
-<td align="right">0.0105850</td>
-<td align="right">0.0301439</td>
-<td align="right">0.0337716</td>
+<td align="right">0.4427828</td>
+<td align="right">-0.0109327</td>
+<td align="right">0.1208887</td>
+<td align="right">0.0213499</td>
+<td align="right">0.0086676</td>
+<td align="right">0.0251383</td>
+<td align="right">0.0455578</td>
 </tr>
 </tbody>
 </table>
@@ -847,11 +848,11 @@ and <code>race</code>.</p>
 <span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">&quot;Race includes:&quot;</span>)</span>
 <span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(<span class="fu">as.factor</span>(X_train_3<span class="sc">$</span>race))   <span class="co"># Check how many sex categories are there</span></span>
 <span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a><span class="do">##       age hours.per.week     sex   race</span></span>
-<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a><span class="do">## 19431  19             40    Male  White</span></span>
-<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a><span class="do">## 30151  22             35  Female  White</span></span>
-<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a><span class="do">## 4138   45             40    Male  White</span></span>
-<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a><span class="do">## 32350  36             40  Female  Black</span></span>
-<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a><span class="do">## 7329   45             35  Female  Black</span></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a><span class="do">## 18017  37             50    Male  White</span></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a><span class="do">## 29429  47             50    Male  White</span></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a><span class="do">## 365    22             55    Male  White</span></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a><span class="do">## 10514  21             20    Male  White</span></span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a><span class="do">## 20942  19             20  Female  White</span></span>
 <span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] &quot;Sex includes:&quot;</span></span>
 <span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] &quot; Female&quot; &quot; Male&quot;  </span></span>
 <span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] &quot;Race includes:&quot;</span></span>
@@ -881,11 +882,11 @@ categories.</p>
 <span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Inspect training data (X)</span></span>
 <span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(X_train_3, <span class="dv">5</span>)</span>
 <span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a><span class="do">##       age hours.per.week is.Male is.White is.Black is.AsianPac is.AmerInd</span></span>
-<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a><span class="do">## 19431  19             40       1        1        0           0          0</span></span>
-<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a><span class="do">## 30151  22             35       0        1        0           0          0</span></span>
-<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a><span class="do">## 4138   45             40       1        1        0           0          0</span></span>
-<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a><span class="do">## 32350  36             40       0        0        1           0          0</span></span>
-<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a><span class="do">## 7329   45             35       0        0        1           0          0</span></span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a><span class="do">## 18017  37             50       1        1        0           0          0</span></span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a><span class="do">## 29429  47             50       1        1        0           0          0</span></span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a><span class="do">## 365    22             55       1        1        0           0          0</span></span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a><span class="do">## 10514  21             20       1        1        0           0          0</span></span>
+<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a><span class="do">## 20942  19             20       0        1        0           0          0</span></span>
 <span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb18-22"><a href="#cb18-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Cast label (y) to binary factor</span></span>
 <span id="cb18-23"><a href="#cb18-23" aria-hidden="true" tabindex="-1"></a>y_train_3 <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(y_train_3 <span class="sc">==</span> <span class="st">&quot; &gt;50K&quot;</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span>
@@ -910,68 +911,68 @@ categories.</p>
 <tbody>
 <tr class="odd">
 <td align="left">intercept</td>
-<td align="right">-6.4217258</td>
-<td align="right">-0.5104118</td>
-<td align="right">-13.3569723</td>
-<td align="right">-5.1943282</td>
+<td align="right">-6.2611751</td>
+<td align="right">-0.5052041</td>
+<td align="right">-12.2571695</td>
+<td align="right">-4.5490317</td>
 </tr>
 <tr class="even">
 <td align="left">age</td>
-<td align="right">0.0429333</td>
-<td align="right">0.0068281</td>
-<td align="right">0.0333407</td>
-<td align="right">0.0530493</td>
+<td align="right">0.0364381</td>
+<td align="right">0.0055389</td>
+<td align="right">0.0296080</td>
+<td align="right">0.0446039</td>
 </tr>
 <tr class="odd">
 <td align="left">hours.per.week</td>
-<td align="right">0.0409349</td>
-<td align="right">0.0066062</td>
-<td align="right">0.0282183</td>
-<td align="right">0.0565652</td>
+<td align="right">0.0507104</td>
+<td align="right">0.0082520</td>
+<td align="right">0.0405026</td>
+<td align="right">0.0628528</td>
 </tr>
 <tr class="even">
 <td align="left">is.Male</td>
-<td align="right">0.8268227</td>
-<td align="right">0.1142562</td>
-<td align="right">0.5924305</td>
-<td align="right">1.0798288</td>
+<td align="right">0.8457742</td>
+<td align="right">0.1207136</td>
+<td align="right">0.7237831</td>
+<td align="right">1.2276278</td>
 </tr>
 <tr class="odd">
 <td align="left">is.White</td>
-<td align="right">1.2548138</td>
-<td align="right">0.1547549</td>
-<td align="right">0.1737576</td>
-<td align="right">8.2642391</td>
+<td align="right">0.9804311</td>
+<td align="right">0.1359846</td>
+<td align="right">-0.4393600</td>
+<td align="right">6.8781137</td>
 </tr>
 <tr class="even">
 <td align="left">is.Black</td>
-<td align="right">0.6574271</td>
-<td align="right">0.0750481</td>
-<td align="right">-0.4400917</td>
-<td align="right">7.6334517</td>
+<td align="right">0.2022542</td>
+<td align="right">0.0324873</td>
+<td align="right">-1.3315867</td>
+<td align="right">5.7636444</td>
 </tr>
 <tr class="odd">
 <td align="left">is.AsianPac</td>
-<td align="right">0.9561093</td>
-<td align="right">0.1218802</td>
-<td align="right">-5.5218328</td>
-<td align="right">7.5579386</td>
+<td align="right">-6.4589259</td>
+<td align="right">-0.1542364</td>
+<td align="right">-9.7368509</td>
+<td align="right">-4.7313167</td>
 </tr>
 <tr class="even">
 <td align="left">is.AmerInd</td>
-<td align="right">1.1046468</td>
-<td align="right">0.1203648</td>
-<td align="right">-0.1744372</td>
-<td align="right">7.8021649</td>
+<td align="right">1.4489264</td>
+<td align="right">0.2189783</td>
+<td align="right">-0.1380362</td>
+<td align="right">7.0236028</td>
 </tr>
 </tbody>
 </table>
 <div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>fit_3<span class="sc">$</span>Metrics</span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="do">##            Prevalence              Accuracy           Sensitivity </span></span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="do">##             0.2530000             0.7490000             0.1699605 </span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="do">##             0.2550000             0.7520000             0.1647059 </span></span>
 <span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="do">##           Specificity  False.Discovery.Rate Diagnostic.Odds.Ratio </span></span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="do">##             0.9451138             0.4880952             3.5259001</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="do">##             0.9530201             0.4545455             4.0000000</span></span>
 <span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>confusion_Matrix_3 <span class="ot">&lt;-</span> fit_3<span class="sc">$</span>Confusion.Matrix</span>
 <span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(confusion_Matrix_3)</span></code></pre></div>
@@ -986,13 +987,13 @@ categories.</p>
 <tbody>
 <tr class="odd">
 <td align="left">Actual.1</td>
-<td align="right">43</td>
-<td align="right">210</td>
+<td align="right">42</td>
+<td align="right">213</td>
 </tr>
 <tr class="even">
 <td align="left">Actual.0</td>
-<td align="right">41</td>
-<td align="right">706</td>
+<td align="right">35</td>
+<td align="right">710</td>
 </tr>
 </tbody>
 </table>
@@ -1023,84 +1024,84 @@ categories.</p>
 <tbody>
 <tr class="odd">
 <td align="right">0.1</td>
-<td align="right">0.253</td>
-<td align="right">0.435</td>
-<td align="right">0.9723320</td>
-<td align="right">0.2530120</td>
-<td align="right">0.6940299</td>
-<td align="right">11.903226</td>
+<td align="right">0.255</td>
+<td align="right">0.429</td>
+<td align="right">0.9607843</td>
+<td align="right">0.2469799</td>
+<td align="right">0.6960298</td>
+<td align="right">8.035651</td>
 </tr>
 <tr class="even">
 <td align="right">0.2</td>
-<td align="right">0.253</td>
-<td align="right">0.609</td>
-<td align="right">0.8379447</td>
-<td align="right">0.5314592</td>
-<td align="right">0.6227758</td>
-<td align="right">5.865087</td>
+<td align="right">0.255</td>
+<td align="right">0.615</td>
+<td align="right">0.8549020</td>
+<td align="right">0.5328859</td>
+<td align="right">0.6148410</td>
+<td align="right">6.721497</td>
 </tr>
 <tr class="odd">
 <td align="right">0.3</td>
-<td align="right">0.253</td>
-<td align="right">0.718</td>
-<td align="right">0.6126482</td>
-<td align="right">0.7536814</td>
-<td align="right">0.5427729</td>
-<td align="right">4.839452</td>
+<td align="right">0.255</td>
+<td align="right">0.732</td>
+<td align="right">0.6392157</td>
+<td align="right">0.7637584</td>
+<td align="right">0.5191740</td>
+<td align="right">5.727952</td>
 </tr>
 <tr class="even">
 <td align="right">0.4</td>
-<td align="right">0.253</td>
-<td align="right">0.735</td>
-<td align="right">0.3399209</td>
-<td align="right">0.8688086</td>
-<td align="right">0.5326087</td>
-<td align="right">3.410363</td>
+<td align="right">0.255</td>
+<td align="right">0.747</td>
+<td align="right">0.3647059</td>
+<td align="right">0.8778523</td>
+<td align="right">0.4945652</td>
+<td align="right">4.125763</td>
 </tr>
 <tr class="odd">
 <td align="right">0.5</td>
-<td align="right">0.253</td>
-<td align="right">0.749</td>
-<td align="right">0.1699605</td>
-<td align="right">0.9451138</td>
-<td align="right">0.4880952</td>
-<td align="right">3.525900</td>
+<td align="right">0.255</td>
+<td align="right">0.752</td>
+<td align="right">0.1647059</td>
+<td align="right">0.9530201</td>
+<td align="right">0.4545455</td>
+<td align="right">4.000000</td>
 </tr>
 <tr class="even">
 <td align="right">0.6</td>
-<td align="right">0.253</td>
-<td align="right">0.746</td>
-<td align="right">0.0592885</td>
-<td align="right">0.9785810</td>
-<td align="right">0.5161290</td>
-<td align="right">2.879464</td>
+<td align="right">0.255</td>
+<td align="right">0.752</td>
+<td align="right">0.0901961</td>
+<td align="right">0.9785235</td>
+<td align="right">0.4102564</td>
+<td align="right">4.516972</td>
 </tr>
 <tr class="odd">
 <td align="right">0.7</td>
-<td align="right">0.253</td>
-<td align="right">0.747</td>
-<td align="right">0.0237154</td>
-<td align="right">0.9919679</td>
-<td align="right">0.5000000</td>
-<td align="right">3.000000</td>
+<td align="right">0.255</td>
+<td align="right">0.748</td>
+<td align="right">0.0509804</td>
+<td align="right">0.9865772</td>
+<td align="right">0.4347826</td>
+<td align="right">3.948347</td>
 </tr>
 <tr class="even">
 <td align="right">0.8</td>
-<td align="right">0.253</td>
-<td align="right">0.745</td>
-<td align="right">0.0079051</td>
-<td align="right">0.9946452</td>
-<td align="right">0.6666667</td>
-<td align="right">1.480080</td>
+<td align="right">0.255</td>
+<td align="right">0.749</td>
+<td align="right">0.0274510</td>
+<td align="right">0.9959732</td>
+<td align="right">0.3000000</td>
+<td align="right">6.981183</td>
 </tr>
 <tr class="odd">
 <td align="right">0.9</td>
-<td align="right">0.253</td>
-<td align="right">0.747</td>
-<td align="right">0.0000000</td>
+<td align="right">0.255</td>
+<td align="right">0.746</td>
+<td align="right">0.0039216</td>
 <td align="right">1.0000000</td>
-<td align="right">NaN</td>
-<td align="right">NaN</td>
+<td align="right">0.0000000</td>
+<td align="right">Inf</td>
 </tr>
 </tbody>
 </table>

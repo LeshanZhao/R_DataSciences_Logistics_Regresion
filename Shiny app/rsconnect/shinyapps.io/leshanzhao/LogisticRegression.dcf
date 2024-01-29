@@ -1,12 +1,12 @@
-name: Logistic2
-title: logistic2
+name: LogisticRegression
+title: LogisticRegression
 username: leshanzhao
 account: leshanzhao
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
-appId: 11055372
-bundleId:
-url: https://leshanzhao.shinyapps.io/Logistic2/
+appId: 11056009
+bundleId: 8192902
+url: https://leshanzhao.shinyapps.io/LogisticRegression/
 version: 1
 asMultiple: FALSE
 asStatic: FALSE
